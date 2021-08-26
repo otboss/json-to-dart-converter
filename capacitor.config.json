@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "typescript-dart-class-converter",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

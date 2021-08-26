@@ -1,0 +1,7 @@
+{
+  "name": "typescript-dart-class-converter",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
