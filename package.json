@@ -19,6 +19,8 @@
     "@types/react-dom": "^16.9.10",
     "@types/react-router": "^5.1.11",
     "@types/react-router-dom": "^5.1.7",
+    "@uiw/react-codemirror": "^3.2.1",
+    "beautify": "0.0.8",
     "ionicons": "^5.4.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -65,7 +67,8 @@
     ]
   },
   "devDependencies": {
-    "@capacitor/cli": "3.2.0"
+    "@capacitor/cli": "3.2.0",
+    "@types/beautify": "0.0.0"
   },
   "description": "An Ionic project"
 }
