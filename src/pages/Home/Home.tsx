@@ -7,7 +7,7 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Typescript / Dart Class Converter</IonTitle>
+          <IonTitle>JSON to Dart Class Converter</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>

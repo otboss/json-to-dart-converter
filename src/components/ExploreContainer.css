@@ -55,3 +55,16 @@
 .container .output-box-placeholder {
   font-family: 'Courier New', Courier, monospace;
 }
+
+@media only screen and (max-width: 1200px) {
+  .container .controls{
+    width: 100%;
+    padding: 30px;
+  }
+
+  .container .ad-container{
+    height: 150px;
+    padding-bottom: 30px;
+    width: 100%;
+  }  
+}
