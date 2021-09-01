@@ -159,16 +159,16 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
   };
 
 
-  useEffect(() => {
-    setAd(<GoogleAdsense
-      adClient='ca-pub-3393367941652401'
-      adSlot='9859033054'
-    />);
-    setAdHor(<GoogleAdsense
-      adClient='ca-pub-3393367941652401'
-      adSlot='5653012974'
-    />);
-  }, []);
+  // useEffect(() => {
+  //   setAd(<GoogleAdsense
+  //     adClient='ca-pub-3393367941652401'
+  //     adSlot='9859033054'
+  //   />);
+  //   setAdHor(<GoogleAdsense
+  //     adClient='ca-pub-3393367941652401'
+  //     adSlot='5653012974'
+  //   />);
+  // }, []);
 
   return (
     <div className="container">
