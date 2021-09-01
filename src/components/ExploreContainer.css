@@ -52,6 +52,18 @@
   height: 100%;
 }
 
+
+.container .ad-banner-vertical{
+  width: 100%;
+  height: 100%;
+}
+
+
+.container .ad-banner-horizontal{
+  width: 100%;
+  height: 100%;
+}
+
 .container .output-box-placeholder {
   font-family: 'Courier New', Courier, monospace;
 }
@@ -67,4 +79,15 @@
     padding-bottom: 30px;
     width: 100%;
   }  
+
+  .ad-banner-vertical{
+    display: none;
+  }
+  
+}
+
+@media only screen and (min-width: 1200px) {
+  .ad-banner-horizontal{
+    display: none;
+  }
 }

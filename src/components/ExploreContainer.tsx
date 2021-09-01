@@ -1,11 +1,11 @@
-import { IonFabButton, IonIcon } from '@ionic/react';
 import { useEffect, useState } from 'react';
-import { swapHorizontalOutline, arrowForward } from 'ionicons/icons';
 import CodeMirror from '@uiw/react-codemirror';
 import './ExploreContainer.css';
 import 'codemirror/keymap/sublime';
 import 'codemirror/theme/monokai.css';
 import 'codemirror/theme/eclipse.css';
+import GoogleAdsense from 'react-adsense-google';
+import createDOMPurify from 'dompurify';
 const beautify = require("beautify");
 
 interface ContainerProps { }
@@ -13,6 +13,8 @@ interface ContainerProps { }
 const ExploreContainer: React.FC<ContainerProps> = () => {
   const [output, setOutput] = useState<string>("Generating Output..");
   const [input, setInput] = useState<string>("");
+  const [ad, setAd] = useState<any>();
+  const [adHor, setAdHor] = useState<any>();
 
   const toTitleCase = (str: string) =>  {
     return str.replace(
@@ -124,9 +126,60 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
     }
   }
 
+  const DOMPurify = createDOMPurify(window);
+
+  const bannerVertical = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3393367941652401"
+      crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+      style="display:block; text-align:center;"
+      data-ad-layout="in-article"
+      data-ad-format="fluid"
+      data-ad-client="ca-pub-3393367941652401"
+      data-ad-slot="9859033054"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>`;
+
+  const bannerHorizontal = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3393367941652401"
+      crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+      style="display:block; text-align:center;"
+      data-ad-layout="in-article"
+      data-ad-format="fluid"
+      data-ad-client="ca-pub-3393367941652401"
+      data-ad-slot="5653012974"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>` 
+
+  const stringToHTML = function (str: string) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(str, 'text/html');
+    return doc.body;
+  };
+
+
+  useEffect(() => {
+    setAd(<GoogleAdsense
+      adClient='ca-pub-3393367941652401'
+      adSlot='9859033054'
+    />);
+    setAdHor(<GoogleAdsense
+      adClient='ca-pub-3393367941652401'
+      adSlot='5653012974'
+    />);
+  }, []);
+
   return (
     <div className="container">
-      <div className="ad-container"></div>
+      <div className="ad-container">
+        <div className="ad-banner-vertical">
+          {/* {ad} */}
+        </div>
+        <div className="ad-banner-horizontal">
+          {/* {adHor} */}
+        </div>
+      </div>
 
       <div className="input-box">
         <CodeMirror
