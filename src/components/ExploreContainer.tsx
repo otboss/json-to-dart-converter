@@ -172,14 +172,14 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
 
   return (
     <div className="container">
-      <div className="ad-container">
+      {/* <div className="ad-container">
         <div className="ad-banner-vertical">
-          {/* {ad} */}
+          {ad}
         </div>
         <div className="ad-banner-horizontal">
-          {/* {adHor} */}
+          {adHor}
         </div>
-      </div>
+      </div> */}
 
       <div className="input-box">
         <CodeMirror
