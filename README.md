@@ -1,5 +1,5 @@
 # json-to-dart-converter
-Simple React JS app to convert JSON to plain, robust Dart classes that are compatible with older versions of Dart
+Simple React JS app to convert JSON to plain, robust Dart classes that are compatible with both older and newer versions of Dart
 <br>
 <br>
 See a live example at:
